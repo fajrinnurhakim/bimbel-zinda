@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from 'universal-cookie';
-import { Button, Container, Form } from 'react-bootstrap';
+import { Button, Container, Form, InputGroup } from 'react-bootstrap';
 import Swal from 'sweetalert2';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -11,7 +13,11 @@ const Login = () => {
   const [error, setError] = useState('');
   const cookies = new Cookies();
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
   const url = 'https://bimbelzinda.my.id/be/public/api/login';
 
   const loginHandler = async (e) => {
@@ -68,12 +74,20 @@ const Login = () => {
           </Form.Group>
           <Form.Group className="mb-3" controlId="password">
             <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
+            <InputGroup>
+              <Form.Control
+                type={showPassword ? 'text' : 'password'}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              <InputGroup.Text
+                onClick={togglePasswordVisibility}
+                style={{ cursor: 'pointer' }}
+              >
+                <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+              </InputGroup.Text>
+            </InputGroup>
           </Form.Group>
           {error && <p className="text-danger">{error}</p>}
           <Button
