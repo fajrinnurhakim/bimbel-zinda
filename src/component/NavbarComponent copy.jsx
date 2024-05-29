@@ -25,7 +25,7 @@ function BasicExample() {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="#home" className="d-flex align-item-center">
-          <img src="./public/logo.png" alt="logo" style={{ width: '24px' }} />
+          <img src="./logo.png" alt="logo" style={{ width: '24px' }} />
           <span className="ms-2">Bimbel Zinda</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

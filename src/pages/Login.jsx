@@ -53,7 +53,7 @@ const Login = () => {
     <Container className="col-lg-6 col-md-9 mt-5">
       <div className="card p-5">
         <div className="d-flex justify-content-center mb-3">
-          <img src="./public/logo.png" style={{ width: '64px' }} />
+          <img src="./logo.png" style={{ width: '64px' }} />
         </div>
 
         <Form onSubmit={loginHandler}>
