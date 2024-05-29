@@ -40,7 +40,7 @@ export const AddJadwal = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://bimbelzinda.my.id/be/public/api/get-all-siswa',
+          'https://bimbelzinda.my.id/be/public/api/get-all-siswa',
           config
         );
         const data = response.data.data || [];
@@ -56,7 +56,7 @@ export const AddJadwal = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://bimbelzinda.my.id/be/public/api/get-all-tentor',
+          'https://bimbelzinda.my.id/be/public/api/get-all-tentor',
           config
         );
         const data = response.data.data || [];
@@ -72,7 +72,7 @@ export const AddJadwal = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://bimbelzinda.my.id/be/public/api/get-all-mata-pelajaran',
+          'https://bimbelzinda.my.id/be/public/api/get-all-mata-pelajaran',
           config
         );
         const data = response.data.data || [];
@@ -85,7 +85,7 @@ export const AddJadwal = () => {
     fetchData();
   }, []);
 
-  const url = 'http://bimbelzinda.my.id/be/public/api/create-jadwal';
+  const url = 'https://bimbelzinda.my.id/be/public/api/create-jadwal';
   const navigate = useNavigate();
 
   const handleBack = () => {

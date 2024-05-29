@@ -12,7 +12,7 @@ const Login = () => {
   const cookies = new Cookies();
   const navigate = useNavigate();
 
-  const url = 'http://bimbelzinda.my.id/be/public/api/login';
+  const url = 'https://bimbelzinda.my.id/be/public/api/login';
 
   const loginHandler = async (e) => {
     e.preventDefault();

@@ -26,7 +26,7 @@ export const Siswa = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://bimbelzinda.my.id/be/public/api/get-all-siswa',
+          'https://bimbelzinda.my.id/be/public/api/get-all-siswa',
           config
         );
         const data = response.data.data || [];
@@ -55,7 +55,7 @@ export const Siswa = () => {
 
       if (result.isConfirmed) {
         await axios.delete(
-          `http://bimbelzinda.my.id/be/public/api/delete-siswa/${id}`,
+          `https://bimbelzinda.my.id/be/public/api/delete-siswa/${id}`,
           config
         );
         const updatedSiswaData = siswaData.filter((siswa) => siswa.id !== id);
@@ -103,7 +103,7 @@ export const Siswa = () => {
   const handleEditSubmit = async () => {
     try {
       await axios.put(
-        `http://bimbelzinda.my.id/be/public/api/update-siswa/${editData.id}`,
+        `https://bimbelzinda.my.id/be/public/api/update-siswa/${editData.id}`,
         editData,
         config
       );

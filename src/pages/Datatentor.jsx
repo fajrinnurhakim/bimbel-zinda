@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Datatentor = () => {
-  const url = 'http://bimbelzinda.my.id/be/public/api/tentor/index';
+  const url = 'https://bimbelzinda.my.id/be/public/api/tentor/index';
   const [tentor, setTentor] = useState([]);
 
   useEffect(() => {

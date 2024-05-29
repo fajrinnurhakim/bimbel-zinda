@@ -26,7 +26,7 @@ export const MataPelajaran = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://bimbelzinda.my.id/be/public/api/get-all-mata-pelajaran',
+          'https://bimbelzinda.my.id/be/public/api/get-all-mata-pelajaran',
           config
         );
 
@@ -56,7 +56,7 @@ export const MataPelajaran = () => {
 
       if (result.isConfirmed) {
         await axios.delete(
-          `http://bimbelzinda.my.id/be/public/api/delete-mata-pelajaran/${id}`,
+          `https://bimbelzinda.my.id/be/public/api/delete-mata-pelajaran/${id}`,
           config
         );
         const updatedMataPelajaranData = matapelajaranData.filter(
@@ -108,7 +108,7 @@ export const MataPelajaran = () => {
   const handleEditSubmit = async () => {
     try {
       await axios.put(
-        `http://bimbelzinda.my.id/be/public/api/update-mata-pelajaran/${editData.id}`,
+        `https://bimbelzinda.my.id/be/public/api/update-mata-pelajaran/${editData.id}`,
         editData,
         config
       );

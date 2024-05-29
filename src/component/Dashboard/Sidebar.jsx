@@ -23,7 +23,7 @@ export const Sidebar = () => {
   ];
 
   const handleLogout = async () => {
-    const url = 'http://bimbelzinda.my.id/be/public/api/logout';
+    const url = 'https://bimbelzinda.my.id/be/public/api/logout';
     const token = cookies.get('token');
 
     try {

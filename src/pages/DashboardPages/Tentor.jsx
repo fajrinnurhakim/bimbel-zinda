@@ -26,7 +26,7 @@ export const Tentor = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://bimbelzinda.my.id/be/public/api/get-all-tentor',
+          'https://bimbelzinda.my.id/be/public/api/get-all-tentor',
           config
         );
 
@@ -56,7 +56,7 @@ export const Tentor = () => {
 
       if (result.isConfirmed) {
         await axios.delete(
-          `http://bimbelzinda.my.id/be/public/api/delete-tentor/${id}`,
+          `https://bimbelzinda.my.id/be/public/api/delete-tentor/${id}`,
           config
         );
         const updatedData = tentorData.filter((tentor) => tentor.id !== id);
@@ -104,7 +104,7 @@ export const Tentor = () => {
   const handleEditSubmit = async () => {
     try {
       await axios.put(
-        `http://bimbelzinda.my.id/be/public/api/update-tentor/${editData.id}`,
+        `https://bimbelzinda.my.id/be/public/api/update-tentor/${editData.id}`,
         editData,
         config
       );

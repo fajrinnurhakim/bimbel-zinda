@@ -31,7 +31,7 @@ export const Jadwal = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://bimbelzinda.my.id/be/public/api/get-all-siswa',
+          'https://bimbelzinda.my.id/be/public/api/get-all-siswa',
           config
         );
         const data = response.data.data || [];
@@ -47,7 +47,7 @@ export const Jadwal = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://bimbelzinda.my.id/be/public/api/get-all-tentor',
+          'https://bimbelzinda.my.id/be/public/api/get-all-tentor',
           config
         );
         const data = response.data.data || [];
@@ -63,7 +63,7 @@ export const Jadwal = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://bimbelzinda.my.id/be/public/api/get-all-mata-pelajaran',
+          'https://bimbelzinda.my.id/be/public/api/get-all-mata-pelajaran',
           config
         );
         const data = response.data.data || [];
@@ -79,7 +79,7 @@ export const Jadwal = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://bimbelzinda.my.id/be/public/api/get-all-jadwal',
+          'https://bimbelzinda.my.id/be/public/api/get-all-jadwal',
           config
         );
 
@@ -109,7 +109,7 @@ export const Jadwal = () => {
 
       if (result.isConfirmed) {
         await axios.delete(
-          `http://bimbelzinda.my.id/be/public/api/delete-jadwal/${id}`,
+          `https://bimbelzinda.my.id/be/public/api/delete-jadwal/${id}`,
           config
         );
         const updatedJadwalData = jadwalData.filter(
@@ -167,7 +167,7 @@ export const Jadwal = () => {
   const handleEditSubmit = async () => {
     try {
       await axios.put(
-        `http://bimbelzinda.my.id/be/public/api/update-jadwal/${editData.id}`,
+        `https://bimbelzinda.my.id/be/public/api/update-jadwal/${editData.id}`,
         editData,
         config
       );

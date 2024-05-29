@@ -30,7 +30,7 @@ export const AddMapel = () => {
   const [showState, setShowState] = useState(false);
   const [validation, setValidation] = useState([]);
 
-  const url = 'http://bimbelzinda.my.id/be/public/api/create-mata-pelajaran';
+  const url = 'https://bimbelzinda.my.id/be/public/api/create-mata-pelajaran';
   const navigate = useNavigate();
   const handleBack = () => {
     navigate('/dashboard/data_mapel/index');

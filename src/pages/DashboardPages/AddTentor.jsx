@@ -22,7 +22,7 @@ export const AddTentor = () => {
   const [showState, setShowState] = useState(false);
   const [validation, setValidation] = useState([]);
 
-  const url = 'http://bimbelzinda.my.id/be/public/api/create-tentor';
+  const url = 'https://bimbelzinda.my.id/be/public/api/create-tentor';
   const navigate = useNavigate();
 
   const handleBack = () => {
