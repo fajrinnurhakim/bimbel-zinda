@@ -1,0 +1,11 @@
+.main-sidebar .sidebar-open{
+  height: 100%;
+  min-height:initial
+}
+
+body:not(.layout-fixed) .main-sidebar {
+    height: 150vh;
+    min-height: initial;
+    position: absolute;
+    top: 0;
+}
