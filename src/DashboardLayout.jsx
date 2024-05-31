@@ -24,7 +24,7 @@ const DashboardLayout = ({ children }) => {
       setIsLoggedIn(true);
     } else {
       setIsLoggedIn(false);
-      alert('Login Terlebih Dahulu');
+      alert('Silakan Login Terlebih Dahulu');
       navigate('/login');
     }
   }, []);
